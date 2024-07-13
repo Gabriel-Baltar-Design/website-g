@@ -9,6 +9,9 @@
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale;
     font-display: swap;
+}
+
+body {
     background-color: var(--background-color);
 }
 
@@ -42,6 +45,7 @@
     align-items: center;
     padding: 40px 1.5rem;
     margin: 0 auto;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .tag-work-available {
@@ -52,6 +56,7 @@
     align-items: center;
     gap: 0.5rem;
     border: 1px solid var(--border-color);
+    
 }
 
 .tag-work-available-mobile {
@@ -76,7 +81,6 @@
     width: 5px;
     background-color: var(--available-light);
     border-radius: 50%;
-    z-index: 1000;
 }
 
 .navbar-container span {
@@ -85,6 +89,8 @@
     width: 5px;
     background-color: var(--available-light);
     border-radius: 50%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
 
 }
 
@@ -103,6 +109,7 @@
     color: var(--text-color-primary);
     flex-direction: column;
     align-items: center;
+    padding-bottom: 6.625rem;
 }
 
 .main-content {
@@ -150,6 +157,157 @@
     display: flex;
 }
 
+.mywork-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    color: var(--text-color-primary);
+}
+
+.mywork-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+
+.mywork-title h3{
+    font-size: 2rem;
+    letter-spacing: -1px;
+    line-height: 100%;
+    font-weight: 400;
+}
+
+.mywork-title h3{
+    font-size: 2rem;
+    letter-spacing: -1px;
+    line-height: 100%;
+    font-weight: 400;
+}
+
+.mywork-title a {
+    background-color: var(--background-color);
+    padding: 11px 16px;
+    color: var(--text-color-primary);
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: -0.3px;
+    border-radius: 0.75rem;
+    line-height: 150%;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
+.card img {
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    max-width: 100%;
+}
+
+.card.scale img{
+    max-width: 100%;
+    display: flex;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.scale img:hover{
+    transform: scale(1.04);
+}
+
+.button-description {
+    position: absolute;
+    height: 130px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 5%);
+    bottom: 0px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(100px);
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* To prevent mouse events when hidden */
+}
+
+.button-description-content {
+    position: absolute;
+}
+
+.button-description-content h4, p{
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.button-description-content h4 {
+    font-size: 2.5rem;
+    line-height: 100%;
+    font-weight: 400;
+}
+
+.button-description-content p {
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+}
+
+.button-description a {
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--text-color-primary);
+    position: absolute;
+    right: 32px;
+    bottom: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6.1875rem;
+    
+}
+
+.button-description a img{
+    position: absolute;
+}
+
+.button-description.active {
+    position: absolute;
+    height: 130px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 10%);
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(100px); 
+    cursor: pointer;
+    opacity: 1;
+    pointer-events: all; 
+    transition: opacity 0.6s ease;
+}
+
+@media screen and (max-width: 980px) {
+    .button-description-content h4 {
+        font-size: 1.5rem;
+    }
+}
+
 @media screen and (max-width: 910px) {
 
     .main-content h1 {
@@ -157,6 +315,21 @@
         max-width: 600px;
     }
     
+}
+
+@media screen and (max-width: 740px) {
+    .button-description-content h4 {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    .card-container {
+        flex-direction: column;
+    }
+
+
 }
 
 @media screen and (max-width: 470px) {
@@ -177,6 +350,15 @@
     .tag-work-available-mobile {
         display: flex;
         margin-bottom: 0.5rem;
+    }
+
+    .main-container span{
+        height: 5px;
+        width: 5px;
+        background-color: var(--available-light);
+        border-radius: 50%;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
     }
     
 }
