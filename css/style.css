@@ -22,6 +22,18 @@
     --button-color: #ffffff;
 }
 
+.scroll {
+    opacity: 1; /* Ocultar o conteúdo antes da animação */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.scroll-tag {
+    opacity: 1; /* Ocultar o conteúdo antes da animação */
+    padding: 20px;
+    border-radius: 8px;
+}
+
 .navbar-container {
     color: var(--text-color-primary);
     display: flex;
@@ -34,12 +46,37 @@
 
 .tag-work-available {
     background-color: var(--tag-background);
-    padding: 0.5rem 1rem;
+    padding: 0.375rem 1rem;
     border-radius: 1.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     border: 1px solid var(--border-color);
+}
+
+.tag-work-available-mobile {
+    background-color: var(--tag-background);
+    padding: 0.375rem 1rem;
+    border-radius: 1.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--border-color);
+    width: 170px;
+    display: none;
+}
+
+.tag-work-available-mobile p{
+    background-color: var(--tag-background);
+    font-size: 12px;
+    text-align: center;
+}
+
+.main-container span{
+    height: 5px;
+    width: 5px;
+    background-color: var(--available-light);
+    border-radius: 50%;
+    z-index: 1000;
 }
 
 .navbar-container span {
@@ -52,6 +89,7 @@
 }
 
 .navbar-container p {
+
     background-color: var(--tag-background);
     font-size: 12px;
 
@@ -63,6 +101,8 @@
     display: flex;
     justify-content: center;
     color: var(--text-color-primary);
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-content {
@@ -73,7 +113,7 @@
 
 .main-content h1 {
     text-align: center;
-    font-size: 88px;
+    font-size: 5.5rem;
     font-weight: 400;
     max-width: 1000px;
     line-height: 100%;
@@ -100,5 +140,53 @@
     font-size: 0.875rem;
     letter-spacing: -0.3px;
     border-radius: 0.75rem;
+}
+
+.active {
+    display: none;
+}
+
+.disable {
+    display: flex;
+}
+
+@media screen and (max-width: 910px) {
+
+    .main-content h1 {
+        font-size: 64px;
+        max-width: 600px;
+    }
+    
+}
+
+@media screen and (max-width: 470px) {
+
+    .main-content h1 {
+        font-size: 40px;
+        max-width: 600px;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .disable {
+        display: none;
+    }
+
+    .tag-work-available-mobile {
+        display: flex;
+        margin-bottom: 0.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+
+    .main-content a {
+        width: 100%;
+        text-align: center;
+    }
+    
 }
 
