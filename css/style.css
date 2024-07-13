@@ -40,7 +40,7 @@ body {
 .navbar-container {
     color: var(--text-color-primary);
     display: flex;
-    max-width: 1200px;
+    max-width: 1000px;
     justify-content: space-between;
     align-items: center;
     padding: 40px 1.5rem;
@@ -102,14 +102,14 @@ body {
 }
 
 .main-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     color: var(--text-color-primary);
     flex-direction: column;
     align-items: center;
-    padding-bottom: 6.625rem;
+    padding-bottom: 3.5rem;
 }
 
 .main-content {
@@ -158,7 +158,7 @@ body {
 }
 
 .mywork-content {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
     padding: 20px;
     color: var(--text-color-primary);
@@ -207,7 +207,6 @@ body {
     position: relative;
     border-radius: 12px;
     transition: opacity 0.5s ease-in-out;
-    
 }
 
 .card img {
