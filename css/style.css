@@ -141,12 +141,12 @@ body {
 
 .main-content a {
     background-color: var(--button-color);
-    padding: 11px 16px;
+    padding: 14px 20px;
     color: var(--background-color);
     font-weight: 500;
     font-size: 0.875rem;
     letter-spacing: -0.3px;
-    border-radius: 0.75rem;
+    border-radius: 10px;
 }
 
 .active {
@@ -301,6 +301,142 @@ body {
     transition: opacity 0.6s ease;
 }
 
+.services-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--text-color-primary);
+    padding: 20px;
+    margin-top: 2rem;
+}
+
+.services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.service-text h2 {
+    font-size: 1.5rem;
+    line-height: 100%;
+    font-weight: 400;
+}
+
+.service-text p {
+    width: 540px;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+    color: var(--text-secondary);
+}
+
+.service-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--text-color-primary);
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.about-content img{
+    display: flex;
+    object-fit: contain;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.about-text p {
+   font-size: 1rem;
+   font-weight: 400;
+   letter-spacing: -0.5px;
+   color: var(--text-secondary);
+   line-height: 150%;
+}
+
+.social-medias {
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.contact-cta-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    margin-top: 7rem;
+    color: var(--text-color-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.contact-cta-container h2{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 100%;
+}
+
+.contact-cta-button a{
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+    background-color: var(--button-color);
+    padding: 0.875rem 1.25rem;
+    border-radius: 0.625rem;
+    color: var(--background-color);
+    text-align: center;
+    display: flex;
+    max-width: 170px;
+
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    margin-top: 5.5rem;
+    color: var(--text-color-primary);
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-container p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+.sitemap {
+    display: flex;
+    gap: 2rem;
+    color: var(--text-color-primary);
+}
+
+.sitemap a{
+    color: var(--text-color-primary);
+    font-size: 0.875rem;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+
 @media screen and (max-width: 980px) {
     .button-description-content h4 {
         font-size: 1.5rem;
@@ -310,15 +446,68 @@ body {
 @media screen and (max-width: 910px) {
 
     .main-content h1 {
-        font-size: 64px;
+        font-size: 4rem;
         max-width: 600px;
+    }
+
+    .about-text p {
+        max-width: 500px;
+     }
+
+     .about-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 2.5rem;
+    }
+
+    .social-medias {
+        margin-top: 2rem;
     }
     
 }
 
 @media screen and (max-width: 740px) {
+
     .button-description-content h4 {
         font-size: 1.125rem;
+    }
+
+    .service-text {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .service-text p {
+        width: 100%;
+    }
+
+    .services-content {
+        align-items: start;
+    }
+
+    .about-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-content p {
+        width: 100%;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text p {
+        width: 100%;
+     }
+
+     .footer-container {
+        
+        justify-content: center;
+        
     }
 }
 
@@ -328,7 +517,11 @@ body {
         flex-direction: column;
     }
 
+    .footer-container {
+        
+        margin-top: 3rem;
 
+    }
 }
 
 @media screen and (max-width: 470px) {
@@ -358,15 +551,25 @@ body {
         border-radius: 50%;
         transition: opacity 0.5s ease-in-out;
         opacity: 1;
-    }
-    
-}
 
-@media screen and (max-width: 400px) {
+    }
+
+    .about-content img{
+        width: 100%;
+    }
 
     .main-content a {
         width: 100%;
         text-align: center;
+    }
+
+    .contact-cta-container h2{
+        font-size: 1.5rem;
+        
+    }
+
+    .contact-cta-container {
+        margin-top: 72px;
     }
     
 }
