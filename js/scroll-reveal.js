@@ -21,8 +21,40 @@ export function scrollAnimation() {
         ScrollReveal().reveal('.mywork-title', {
             duration: 1000,
             origin: 'bottom',
-            distance: '40px',
+            distance: '60px',
             delay: 230,
+            reset: false
+        });
+
+        ScrollReveal().reveal('.service-1', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '70px',
+            delay: 290,
+            reset: false
+        });
+
+        ScrollReveal().reveal('.service-2', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '80px',
+            delay: 290,
+            reset: false
+        });
+
+        ScrollReveal().reveal('.service-3', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '90px',
+            delay: 290,
+            reset: false
+        });
+
+        ScrollReveal().reveal('.service-4', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '100px',
+            delay: 290,
             reset: false
         });
 
@@ -30,9 +62,26 @@ export function scrollAnimation() {
             duration: 1000,
             origin: 'bottom',
             distance: '80px',
-            delay: 260,
+            delay: 290,
             reset: false
         });
+
+        ScrollReveal().reveal('.about-reveal', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '100px',
+            delay: 290,
+            reset: false
+        });
+
+        ScrollReveal().reveal('.contact-reveal', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '80px',
+            delay: 290,
+            reset: false
+        });
+
 
     });
 
