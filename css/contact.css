@@ -17,6 +17,9 @@
 
 .content {
     display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-bottom: 69px;
 }
 
 .contact-container h1 {
@@ -62,4 +65,142 @@
 
 .contact-form {
     display: flex;
+    max-width: 100%;
+}
+
+.contact-form form {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.user-name {
+    display: flex;
+}
+
+.contact-form input {
+    background-color: var(--border-color);
+    border: none;
+    padding: 0.75rem;
+    color: var(--text-color-primary);
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+    font-weight: 400;
+    border: 1px solid var(--border-color);
+    line-height: 150%;
+}
+
+.label label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    letter-spacing: -0.5px;
+    line-height: 100%;
+    font-weight: 400;
+}
+
+.contact-form input:focus {
+    border: 1px solid #0099FF;
+    outline: none;
+}
+
+.contact-form input::placeholder {
+    font-weight: 400;
+}
+
+.contact-form textarea {
+    background-color: var(--border-color);
+    border: none;
+    padding: 0.75rem;
+    color: var(--text-color-primary);
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+    font-weight: 400;
+    border: 1px solid var(--border-color);
+    resize: vertical;
+    min-height: 48px;
+    max-height: 260px;
+}
+
+.contact-form textarea:focus {
+    border: 1px solid #0099FF;
+    outline: none;
+}
+
+.contact-form textarea::placeholder {
+    font-weight: 400;
+}
+
+.contact-form .button-submit button {
+    background-color: var(--button-color);
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 150%;
+}
+
+
+.user-name input {
+    width: 100%;
+    display: flex;
+    width: 450px;
+}
+
+@media screen and (max-width: 845px) {
+
+    .user-name input {
+        width: 100%;
+        display: flex;
+        width: 350px;
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .contact-form form {
+        width: 100%;
+    }
+
+    .user-name input {
+        display: flex;
+        width: 100%;
+    }
+
+    .tel-number p {
+        max-width: 100%;
+    }
+
+    .page-title h1{
+        display: flex;
+        padding: 2.5rem 0px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 350px) {
+
+    .contact-container h1 {
+        font-size: 36px;
+        letter-spacing: 0px;
+        line-height: 100%;
+        font-weight: 400;
+    }
+
 }
